@@ -2,25 +2,20 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { useUserStore } from "@app/store/useUserStore";
+import Header from "@/app/components/layout/Header"
+import Footer from "@/app/components/layout/Footer"
 
 
 export default function Hero() {
   const username = useUserStore((state) => state.username);
   const setUsername = useUserStore((state) => state.setUsername);
 
-  return (
+  return (<>
+  <Header />
     <section className='text-center'>
-      <div>
-      <p>用户名：{username}</p>
-
-      <button onClick={() => setUsername("Mai")} className='bg-black text-white p-5'>I'm Maimai</button>
-
-      </div>
-
-       <Button>Click me</Button>
-
-
 
     </section>
+  <Footer />
+    </>
   );
 }
