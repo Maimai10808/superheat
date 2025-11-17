@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { useUserStore } from "@app/store/useUserStore";
-import Header from "@/app/components/layout/Header"
-import Footer from "@/app/components/layout/Footer"
+import { useUserStore } from "@/store/useUserStore";
+import Header from "@/components/components/layout/Header"
+import Footer from "@/components/components/layout/Footer"
 
 
 export default function Hero() {

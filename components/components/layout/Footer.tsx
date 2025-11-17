@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -7,13 +8,13 @@ export default function Footer() {
   {/* Left-logo */}
       <div className='container mx-auto flex flex-wrap p-5 flex-row'>
         <div>
-        <a className="flex title-font text-4xl  items-center mb-4 md:mb-0 text-white"  href=''>
+        <Link className="flex title-font text-4xl  items-center mb-4 md:mb-0 text-white"  href=''>
          Superheat
-        </a>
+        </Link>
 
-        <a className='flex mt-10 text-gray-400'>
+        <div className='flex mt-10 text-gray-400'>
           © 2025 Superheat. All rights reserved.
-        </a>
+        </div>
 
         </div >
 
@@ -22,7 +23,7 @@ export default function Footer() {
   <div>
     <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">Products</h2>
     <nav className="list-none mb-10">
-      <li><a className="text-white hover:text-gray-400" href=''>Superheat H1</a></li>
+      <li><Link className="text-white hover:text-gray-400" href=''>Superheat H1</Link></li>
     </nav>
   </div>
 
@@ -30,9 +31,9 @@ export default function Footer() {
   <div>
     <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">Resources</h2>
     <nav className="list-none mb-10">
-      <li><a className="text-white hover:text-gray-400" href=''>Whitepaper</a></li>
-      <li><a className="text-white hover:text-gray-400" href=''>Brand Assets</a></li>
-      <li><a className="text-white hover:text-gray-400" href=''>Media Kit</a></li>
+      <li><Link className="text-white hover:text-gray-400" href=''>Whitepaper</Link></li>
+      <li><Link className="text-white hover:text-gray-400" href=''>Brand Assets</Link></li>
+      <li><Link className="text-white hover:text-gray-400" href=''>Media Kit</Link></li>
     </nav>
   </div>
 
@@ -40,8 +41,8 @@ export default function Footer() {
   <div>
     <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">Social</h2>
     <nav className="list-none mb-10">
-      <li><a className="text-white hover:text-gray-400" href=''>X</a></li>
-      <li><a className="text-white hover:text-gray-400" href=''>Medium</a></li>
+      <li><Link className="text-white hover:text-gray-400" href=''>X</Link></li>
+      <li><Link className="text-white hover:text-gray-400" href=''>Medium</Link></li>
     </nav>
   </div>
 </div>

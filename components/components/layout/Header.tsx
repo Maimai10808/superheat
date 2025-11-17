@@ -1,8 +1,8 @@
 "use client";
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import Link from "next/link";
 import { MoveRight } from 'lucide-react';
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -10,14 +10,14 @@ export default function Header() {
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
 
     {/* Left-logo */}
-    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href=''>
+    <Link className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href=''>
       <span className="ml-3 text-xl">Superheat</span>
-    </a>
+    </Link>
     <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400
                     flex flex-wrap items-center text-base justify-center">
-      <a className="mr-5 hover:text-gray-900" href=''>Products</a>
-      <a className="mr-5 hover:text-gray-900" href=''>Resources</a>
-      <a className="mr-5 hover:text-gray-900" href=''>Social</a>
+      <Link className="mr-5 hover:text-gray-900" href=''>Products</Link>
+      <Link className="mr-5 hover:text-gray-900" href=''>Resources</Link>
+      <Link className="mr-5 hover:text-gray-900" href=''>Social</Link>
     </nav>
 
     {/* Right-Contact-Me-Button */}
