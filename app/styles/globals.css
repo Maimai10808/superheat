@@ -122,4 +122,8 @@
   .text-foreground {
     color: hsl(var(--foreground));
   }
+
+  .bg-footer-gradient {
+    background: linear-gradient(180deg, #151515 0%, #000000 100%);
+  }
 }
