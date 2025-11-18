@@ -5,9 +5,6 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers'
 
-import { MetaMaskInpageProvider } from "@metamask/providers";
-
-
 
 export default function WalletButton() {
 
