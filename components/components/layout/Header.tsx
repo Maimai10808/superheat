@@ -3,8 +3,12 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link'
+import WalletButton from "@/components/components/button/WalletButton";
+
+
 
 export default function Header() {
+
   return (
 <header className="text-gray-600 body-font bg-transparent ">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
@@ -18,7 +22,13 @@ export default function Header() {
       <Link className="mr-5 hover:text-gray-900" href=''>Products</Link>
       <Link className="mr-5 hover:text-gray-900" href=''>Resources</Link>
       <Link className="mr-5 hover:text-gray-900" href=''>Social</Link>
+
+<WalletButton />
+
     </nav>
+
+
+
 
     {/* Right-Contact-Me-Button */}
     <Button variant="outline" size="icon" className="rounded-full bg-gray-500 ">
