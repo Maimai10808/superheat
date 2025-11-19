@@ -2,20 +2,15 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { useUserStore } from "@/store/useUserStore";
-import Header from "@/components/components/layout/Header"
-import Footer from "@/components/components/layout/Footer"
+
 
 
 export default function Hero() {
   const username = useUserStore((state) => state.username);
   const setUsername = useUserStore((state) => state.setUsername);
 
-  return (<>
-  <Header />
-    <section className='text-center'>
+  return (<div className="h-screen bg-[url(section1background.jpg)] flex items-center justify-center">
 
-    </section>
-  <Footer />
-    </>
+    </div>
   );
 }
