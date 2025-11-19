@@ -10,7 +10,7 @@ import ReownWalletButton from "@/components/components/button/ReownWalletButton"
 export default function Header() {
 
   return (
-<header className="text-gray-600 body-font bg-transparent ">
+<header className="fixed top-0 left-0 right-0 text-gray-600 body-font gold-gradient-bg   ">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
 
     {/* Left-logo */}
@@ -33,7 +33,7 @@ export default function Header() {
     {/* Right-Contact-Me-Button */}
     <Button variant="outline" size="icon" className="rounded-full bg-gray-500 ">
       <Image
-      src="/icons8-x-50.png"
+      src="/images/icons8-x-50.png"
       width={20}
       height={20}
       alt="Picture of the author"
