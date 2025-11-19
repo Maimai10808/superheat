@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
-
 import { headers } from 'next/headers' // added
+import { Providers } from './providers/providers'
 import ContextProvider from '@/context'
+
+const headersObj = await headers();
+const cookies = headersObj.get('cookie')
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,16 +30,15 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-   const headersObj = await headers();
-   const cookies = headersObj.get('cookie')
-
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Providers>
         <ContextProvider cookies={cookies}>{children}</ContextProvider>
+       </Providers>
+
       </body>
     </html>
   );

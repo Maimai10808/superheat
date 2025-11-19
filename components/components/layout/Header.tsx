@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link'
 import ReownWalletButton from "@/components/components/button/ReownWalletButton";
+import { WagmiButton }  from "@/components/components/button/WagmiButton";
 
 
 
@@ -23,7 +24,7 @@ export default function Header() {
       <Link className="mr-5 hover:text-gray-900" href=''>Resources</Link>
       <Link className="mr-5 hover:text-gray-900" href=''>Social</Link>
 
-<ReownWalletButton />
+<WagmiButton />
 
     </nav>
 
