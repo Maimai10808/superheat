@@ -126,4 +126,15 @@
   .bg-footer-gradient {
     background: linear-gradient(180deg, #151515 0%, #000000 100%);
   }
+
+  .gold-gradient-text {
+  background: radial-gradient(50% 300.83% at 50% 50%, #FFFFFF 38.14%, #FFD4B7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: radial-gradient(ellipse at center, #FFD700 20%, #000000 100%);
+}
+
 }
