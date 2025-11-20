@@ -1,29 +1,42 @@
-// 基础连接按钮组件
 'use client'
-
-import {
-  useConnect,
-  useDisconnect,
-  useAccount,
-  useEnsName,
-} from 'wagmi'
+import { useOnChainState } from "@/hooks/useOnChainState"
+import { Button } from "@/components/ui/button";
+import Image from 'next/image'
 
 export function WagmiButton() {
-  const { connect, connectors } = useConnect()
-  const { disconnect } = useDisconnect()
-  const { address, isConnected } = useAccount()
-  const { data: ensName } = useEnsName({ address })
+  const {
+  ConnectWallet,
+  DisconnectWallet,
+  isConnected,
+  address,
+  balance,
+  chainId,
+} = useOnChainState();
 
-  const connector = connectors[0] // 默认使用第一个连接器（如 Injected）
+  return (
+  <div>
+    {isConnected ? (
+              <><p>chainId : {chainId}</p>
+                <p>Connected to {address}</p>
+                <p>Balance: {balance}</p>
 
-  return isConnected ? (
-    <div>
-      <p>已连接：{ensName ?? address}</p>
-      <button onClick={() => disconnect()}>断开连接</button>
-    </div>
-  ) : (
-    <button onClick={() => connect({ connector })}>
-      连接钱包
-    </button>
-  )
+                {/* <button onClick={batchRequest}>Batch Request</button> */}
+                <Button variant= "orgcapsule" onClick={DisconnectWallet}>
+                      Disconnect
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button variant="outline" size="icon" className="rounded-full bg-gray-500 " onClick={ConnectWallet}>
+                      <Image
+                      src="/images/metamask-icon.png"
+                      width={20}
+                      height={20}
+                      alt="Picture of the author"
+                    />
+                </Button>
+              </>
+            )}
+  </div>)
+
 }
