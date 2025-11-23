@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image'
 
 export function WagmiButton() {
-  const {
+
+
+const {
   ConnectWallet,
   DisconnectWallet,
   isConnected,

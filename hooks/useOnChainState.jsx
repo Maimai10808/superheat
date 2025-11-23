@@ -8,7 +8,7 @@ import {
   useChainId,
 } from 'wagmi'
 
-export  function useOnChainState() {
+export function useOnChainState() {
 
   const { connect, connectors } = useConnect()
   const { disconnect } = useDisconnect()
