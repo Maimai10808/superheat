@@ -1,8 +1,10 @@
-'use client'
+import Section2App from "@/components/components/sections/Section2-plus/Section2App";
+import Section2Web from "@/components/components/sections/Section2-plus/Section2Web";
+import Section2Products from "@/components/components/sections/Section2-plus/Section2Products";
 
 export default function Section2() {
-  return (
-    <div className="bg-[url('/images/section2background.png')] bg-cover bg-[position:center_200px] h-screen flex justify-center items-center px-6 py-20">
+  return (<div>
+     <div className="bg-[url('/images/section2background.png')] bg-cover bg-[position:center_200px] h-screen flex justify-center items-center px-6 py-20">
       <div className="w-full px-4 flex flex-col justify-center items-center text-white pb-40 space-y-4">
 
         <p className="font-geist font-normal text-[48px] leading-[0.95] tracking-[-0.05em] text-center">
@@ -19,5 +21,12 @@ export default function Section2() {
 
       </div>
     </div>
+
+
+    <Section2Products />
+    <Section2Web />
+    <Section2App />
+
+  </div>
   );
 }
