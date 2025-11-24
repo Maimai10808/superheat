@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
-
 import { headers } from 'next/headers' // added
+import { Providers } from './providers/providers'
 import ContextProvider from '@/context'
 
 const geistSans = Geist({
@@ -27,17 +27,22 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-   const headersObj = await headers();
-   const cookies = headersObj.get('cookie')
-
+  const headersObj = await headers();
+  const cookies = headersObj.get('cookie')
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Providers>
         <ContextProvider cookies={cookies}>{children}</ContextProvider>
+       </Providers>
+
       </body>
     </html>
   );
 }
+
+
+// 动态数据（用户相关的）在组件内部获取，静态数据（不变化的）可以在模块顶层定义

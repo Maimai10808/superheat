@@ -4,13 +4,14 @@ import { Button } from "@/components/ui/button"
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link'
 import ReownWalletButton from "@/components/components/button/ReownWalletButton";
+import { WagmiButton }  from "@/components/components/button/WagmiButton";
 
 
 
 export default function Header() {
 
   return (
-<header className="fixed top-0 left-0 right-0 text-gray-600 body-font gold-gradient-bg   ">
+<header className="fixed top-0 left-0 right-0 text-gray-600 body-font gold-gradient-bg z-10  ">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
 
     {/* Left-logo */}
@@ -23,7 +24,7 @@ export default function Header() {
       <Link className="mr-5 hover:text-gray-900" href=''>Resources</Link>
       <Link className="mr-5 hover:text-gray-900" href=''>Social</Link>
 
-<ReownWalletButton />
+<WagmiButton />
 
     </nav>
 
