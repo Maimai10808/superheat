@@ -141,11 +141,19 @@
 
 
 @layer components {
-  .section2-title {
+  .font-section2-title {
     @apply font-geist font-normal text-[46px] leading-[0.95] tracking-[-0.05em] text-black;
   }
 
-  .section2-subtitle {
+  .font-section2-subtitle {
     @apply font-geist font-light text-[20px] leading-[1.10] tracking-[-0.05em] text-[#767676]
+}
+
+ .font-section4-title {
+    @apply font-geist font-normal text-[36px] leading-[95%] tracking-[-5%] text-white;
+  }
+
+  .font-section4-subtitle {
+    @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-[#767676]
 }
 }
