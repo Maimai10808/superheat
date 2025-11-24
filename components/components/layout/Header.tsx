@@ -11,7 +11,7 @@ import { WagmiButton }  from "@/components/components/button/WagmiButton";
 export default function Header() {
 
   return (
-<header className="fixed top-0 left-0 right-0 text-gray-600 body-font gold-gradient-bg   ">
+<header className="fixed top-0 left-0 right-0 text-gray-600 body-font gold-gradient-bg z-10  ">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
 
     {/* Left-logo */}

@@ -16,12 +16,13 @@ export default function Section3() {
         <div className='flex flex-row space-x-10 mt-20 '>
        {/* Left-Grid */}
         <div className=' bg-white p-5  '>
-          <div className='w-[604px] h-[514px] relative'>
+          <div className='w-[604px] h-[514px] relative overflow-hidden'>
              <Image
       src="/images/section3leftimg.png"
       fill={true}
       style={{objectFit: "cover"}}
       alt="Picture of the author"
+      className="relative z-0"
               />
           </div>
 
@@ -40,12 +41,13 @@ export default function Section3() {
 
          {/* Right-Grid */}
          <div className=' bg-white p-5  w-1/2'>
-          <div className='w-[604px] h-[514px] relative'>
+          <div className='w-[604px] h-[514px] relative overflow-hidden'>
              <Image
       src="/images/section3rightimg.jpg"
       fill={true}
       style={{objectFit: "cover"}}
       alt="Picture of the author"
+      className="relative z-0"
               />
           </div>
 

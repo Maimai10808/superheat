@@ -10,13 +10,13 @@ export default function Section2App() {
         {/* Left */}
         <div className="flex flex-col justify-center space-y-4 w-1/3">
 
-          <p className="section2-title">
+          <p className="font-section2-title">
             Superheat App: <br />
             For Everyday <br />
             Smart Users.
           </p>
 
-          <p className="section2-subtitle">
+          <p className="font-section2-subtitle">
             The SuperHeat App connects your heater,
              your energy, and your earnings — all in one
               place. From real-time control to transparent

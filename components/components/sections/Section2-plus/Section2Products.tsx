@@ -10,13 +10,13 @@ export default function Section2Products() {
         {/* Left */}
         <div className="flex flex-col justify-center space-y-4 w-1/3">
 
-          <p className="section2-title">
+          <p className="font-section2-title">
             Superheat H1:<br />
             Uniquely designed<br />
             for your life.
           </p>
 
-          <p className="section2-subtitle">
+          <p className="font-section2-subtitle">
             High-efficiency hardware that converts <br />
             computing heat into usable hot water. High-<br />
             efficiency hardware that converts computing<br />

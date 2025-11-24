@@ -10,13 +10,13 @@ export default function Section2Web() {
         {/* Left */}
         <div className="flex flex-col justify-center  space-y-4 w-1/3">
 
-          <p className="section2-title">
+          <p className="font-section2-title">
            Super Console:  <br />
             For smart and  <br />
             scalable control.
           </p>
 
-          <p className="section2-subtitle">
+          <p className="font-section2-subtitle">
             Superheat Console provides a centralized
             platform to monitor, configure, and optimize all
             connected devices. Designed for enterprise
