@@ -156,4 +156,8 @@
   .font-section4-subtitle {
     @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-[#767676]
 }
+
+.font-section5-title {
+  @apply font-geist font-normal text-[46px] leading-[95%] tracking-[-5%] text-white;
+}
 }
