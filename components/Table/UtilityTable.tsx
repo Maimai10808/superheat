@@ -1,5 +1,14 @@
+import React from 'react'
+
 export  function UtilityTable({
   Capacity, Power, Voltage, RecoveryRate, Dimension, Passiveincome
+}: {
+  Capacity: React.ReactNode,
+  Power: React.ReactNode,
+  Voltage: React.ReactNode,
+  RecoveryRate: React.ReactNode,
+  Dimension: React.ReactNode,
+  Passiveincome: React.ReactNode,
 }) {
 
   return <table className=''>
