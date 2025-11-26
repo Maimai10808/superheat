@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-import { UtilityGrid } from '../../Grid/UtilityGrid';
-import { RoadmapGrid } from '../../Grid/RoadmapGrid';
+import { UtilityGrid } from '../Grid/UtilityGrid';
+import { RoadmapGrid } from '../Grid/RoadmapGrid';
 import { MoveRight ,Smile, SquareArrowDown, Gauge} from 'lucide-react'
 
 export default function Section5() {
@@ -19,9 +19,6 @@ export default function Section5() {
             className="relative z-0"
                     />
     </div>
-
-
-
 
     {/* Title Section */}
 <div className='flex flex-col px-5 items-center mt-20'>
@@ -168,7 +165,6 @@ export default function Section5() {
 
        </div>
     </div>
-
 
 
    </div>
