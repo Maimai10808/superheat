@@ -30,7 +30,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-  ],
+    "**/*.mts",
+    "web3.d.ts"
+, "hooks/useOnChainState.tsx"  ],
   "exclude": ["node_modules"]
 }
