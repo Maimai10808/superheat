@@ -4,6 +4,8 @@ import "../styles/globals.css";
 import { headers } from 'next/headers' // added
 import { Providers } from './providers/providers'
 import ContextProvider from '@/context'
+import Header from "@/components/components/layout/Header";
+import Footer from "@/components/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +38,13 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-        <ContextProvider cookies={cookies}>{children}</ContextProvider>
+        <ContextProvider cookies={cookies}>
+
+          <Header />
+          {children}
+          <Footer />
+
+        </ContextProvider>
        </Providers>
 
       </body>

@@ -3,6 +3,7 @@
 @tailwind utilities;
 /* @import "tw-animate-css"; */
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -185,3 +186,4 @@
    @apply font-geist font-light text-[12px] leading-[110%] tracking-[-5%] text-[#767676];
  }
 }
+
