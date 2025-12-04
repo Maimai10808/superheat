@@ -25,55 +25,54 @@ export  function UtilityGrid({
 
   return (
 
-  <div className='flex flex-col gap-10'>
+  <div className='flex flex-col gap-10 '>
+
 
     {/* image */}
-    <div className={`${imgbg}  rounded-3xl w-[804px] h-[514px] flex justify-center items-center`}>
-          <div className='w-1/2 h-full relative overflow-hidden'>
-                       <Image
+    <div className={`${imgbg}  rounded-3xl flex relative w-full h-[450px]  overflow-hidden `}>
+              <Image
                 src={imgsrc}
                 fill={true}
-                style={{objectFit: "cover"}}
+                style={{objectFit: "contain"}}
                 alt="Picture of the author"
                 className="relative z-0"
                         />
-          </div>
-          </div>
+    </div>
 
 
     {/* table */}
-    <div className='pl-5'>
+    <div className='w-full'>
     <p className='font-section5-table-td'>{Title}</p>
     <table className='w-full mt-5'>
-    <tbody>
+    <tbody className=''>
       <tr className='border-b border-gray-600'>
         <th className='text-left py-1 pr-6 font-section5-table-th'>Capacity</th>
-        <td className='text-left py-1 pl-20 font-section5-table-td'>{Capacity}</td>
+        <td className='text-left py-1 md:pl-20 pl-3 font-section5-table-td'>{Capacity}</td>
 
       </tr>
       <tr className='border-b border-gray-600'>
         <th className='text-left py-1 pr-6 font-section5-table-th'>Power</th>
-        <td className='text-left py-1 pl-20 font-section5-table-td'>{Power}</td>
+        <td className='text-left py-1 md:pl-20 pl-3 font-section5-table-td'>{Power}</td>
 
       </tr>
       <tr className='border-b border-gray-600'>
         <th className='text-left py-1 pr-6 font-section5-table-th'>Voltage</th>
-        <td className='text-left py-1 pl-20 font-section5-table-td'>{Voltage}</td>
+        <td className='text-left py-1 md:pl-20 pl-3 font-section5-table-td'>{Voltage}</td>
 
       </tr>
       <tr className='border-b border-gray-600'>
         <th className='text-left py-1 pr-6 font-section5-table-th'>Recovery Rate</th>
-        <td className='text-left py-1 pl-20 font-section5-table-td'>{RecoveryRate}</td>
+        <td className='text-left py-1 md:pl-20 pl-3 font-section5-table-td'>{RecoveryRate}</td>
 
       </tr>
       <tr className='border-b border-gray-600'>
         <th className='text-left py-1 pr-6 font-section5-table-th'>Dimension</th>
-        <td className='text-left py-1 pl-20 font-section5-table-td'>{Dimension}</td>
+        <td className='text-left py-1 md:pl-20 pl-3 font-section5-table-td '>{Dimension}</td>
 
       </tr>
       <tr className='border-b border-gray-600'>
         <th className='text-left py-1 pr-6 font-section5-table-th'>Passive income</th>
-        <td className='text-left py-1 pl-20 font-section5-table-td'>{Passiveincome}</td>
+        <td className='text-left py-1 md:pl-20 pl-3 font-section5-table-td'>{Passiveincome}</td>
 
       </tr>
     </tbody>
