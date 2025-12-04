@@ -4,7 +4,7 @@ import Section2Products from "@/components/components/sections/Section2-plus/Sec
 
 export default function Section2() {
   return (<div>
-     <div className="bg-[url('/images/section2background.png')] bg-cover bg-[position:center_200px] h-screen flex justify-center items-center px-6 py-20">
+     <div className="bg-[url('/images/section2background.png')] bg-contain  bg-[position:center_200px] h-screen flex justify-center items-center px-6 py-20">
 
       {Title()}
 
@@ -12,8 +12,6 @@ export default function Section2() {
 
 
     <Section2Products />
-    {/* <Section2Web />
-    <Section2App /> */}
 
   </div>
   );

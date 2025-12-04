@@ -1,61 +1,41 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-
-import { useState, useEffect } from "react";
+import { useProductStore } from "@/store/productStore";
 
 export default function ProductsChangingButton() {
-  const [ProductsDisplay, setProductsDisplay] = useState("Residential");
-//   useEffect(() => {
-//     return () => {};
-//   }, [person]);
+  const productType = useProductStore((state) => state.productType);
+  const setProductType = useProductStore((state) => state.setProductType);
+
+  function handleValueChange(value: string) {
+    if (value) {
+      setProductType(value);
+    }
+  }
 
   return (
-    //   <select value={person} onChange={e => {
-    //     setPerson(e.target.value);
-    //   }}>
-    //     <option value="Alice">Alice</option>
-    //     <option value="Bob">Bob</option>
-    //     <option value="Taylor">Taylor</option>
-    //   </select>
-    //   <hr />
-    //   <p><i>{bio ?? 'Loading...'}</i></p>
-
     <div>
-      <ToggleGroup type="single" value={ProductsDisplay} onChange= {e =>  setProductsDisplay(e.target.value)}>
-
+      <ToggleGroup
+        type="single"
+        value={productType}
+        onValueChange={handleValueChange}
+      >
         <ToggleGroupItem
           value="Residential"
-          aria-label="Toggle bold">
+          aria-label="Toggle bold"
+          className="bg-gray-300"
+        >
           Residential
         </ToggleGroupItem>
 
         <ToggleGroupItem
           value="Commercial"
           aria-label="Toggle italic"
+          className=" bg-gray-300"
         >
           Commercial
         </ToggleGroupItem>
-
       </ToggleGroup>
     </div>
   );
 }
-
-// export function () {
-
-//
-
-//     function ResidentialhandleClick() {
-//         setProductsDisplay('Residential')
-//     }
-
-//      function CommercialhandleClick() {
-//         setProductsDisplay('Commercial')
-//     }
-
-//     return (
-//
-//     )
-// }

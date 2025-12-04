@@ -1,66 +1,94 @@
-import Image from 'next/image'
+"use client";
+
+import Image from "next/image";
+import ProductsChangingButton from "../button/ProductsChangingButton";
+import { useProductStore } from "@/store/productStore";
+
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
+import { Section3Img } from "../Grid/Section3Img";
 
 export default function Section3() {
   return (
-    <div className='bg-black flex justify-center items-center px-10 '>
-      {/* container */}
-      <div className='container  w-full flex flex-col  items-center mb-[150px] mt-[300px]'>
+    <div className="w-full h-screen bg-white flex flex-col justify-center items-center gap-5 mt-10">
+      {/* ImgDisplay */}
 
-      {/* title */}
-        <div className='flex flex-col justify-center space-y-4 w-1/2'>
-        <p className='font-geist font-normal text-[48px] leading-[95%] tracking-[-5%] text-center text-white'>Who is for?</p>
-        <p className='font-geist font-normal text-[36px] leading-[95%] tracking-[-5%] text-center text-gray-400'>A smarter way to heat — for every home and business.</p>
-        </div>
+      {ImgDisplay()}
 
-      {/* Grid */}
-        <div className='flex flex-row space-x-10 mt-20 '>
-       {/* Left-Grid */}
-        <div className=' bg-white p-5  '>
-          <div className='w-[604px] h-[514px] relative overflow-hidden'>
-             <Image
-      src="/images/section3leftimg.png"
-      fill={true}
-      style={{objectFit: "cover"}}
-      alt="Picture of the author"
-      className="relative z-0"
-              />
-          </div>
+      {/* switch */}
+      {Switch()}
 
-          <div className='mt-5 space-y-5'>
-            <p className='font-geist font-normal text-[36px] leading-[95%] tracking-[-5%] align-middle text-black'>Home Users</p>
-            <p className='font-geist font-light text-[20px] leading-[110%] tracking-[-5%] align-middle text-gray-400'>Superheat H1 is engineered for performance —
-              Enjoy steady <span className='text-red-700'>hot water, save energy, and earn Bitcoin effortlessly.</span>
-            </p>
-          </div>
-        </div>
+      {/* Title */}
+      {Title()}
 
-        <div className='w-1/3'>
-
-        </div>
-
-
-         {/* Right-Grid */}
-         <div className=' bg-white p-5  w-1/2'>
-          <div className='w-[604px] h-[514px] relative overflow-hidden'>
-             <Image
-      src="/images/section3rightimg.jpg"
-      fill={true}
-      style={{objectFit: "cover"}}
-      alt="Picture of the author"
-      className="relative z-0"
-              />
-          </div>
-
-          <div className='mt-5 space-y-5'>
-            <p className='font-geist font-normal text-[36px] leading-[95%] tracking-[-5%] align-middle text-black'>Hotels & Properties</p>
-            <p className='font-geist font-light text-[20px] leading-[110%] tracking-[-5%] align-middle text-gray-400'>Each unit installed transforms household consumption into a growing revenue stream—<span className='text-red-700'>scalable passive income for commercial projects.</span>
-            </p>
-          </div>
-        </div>
-
-
-        </div>
-      </div>
+      {/* Button */}
+      {TheButton()}
     </div>
   );
+}
+
+function TheButton() {
+  return (
+    <div className="">
+      <Button variant="outline" className="rounded-full">
+          <Plus /> Learn more about the product
+      </Button>
+    </div>
+  );
+}
+
+function Switch() {
+  return (
+    <div className="">
+      <ProductsChangingButton />
+    </div>
+  );
+}
+
+function ImgDisplay() {
+  const productType = useProductStore((state) => state.productType);
+
+  if (productType === "Residential") {
+    return <Section3Img imgsrc="/images/section3leftimg.png" />;
+  } else {
+    return <Section3Img imgsrc="/images/section3rightimg.jpg" />;
+  }
+}
+
+function Title() {
+  const productType = useProductStore((state) => state.productType);
+
+  if (productType === "Residential") {
+    return (
+      <div className="flex md:flex-row flex-col justify-center items-center mt-5 mx-10 w-4/5">
+        <p className="text-left font-geist font-normal text-[56px] leading-[95%] tracking-[-5%] text-black w-1/3">
+          Efficient by design,made for total home comfort.
+        </p>
+        <div className="w-1/5"></div>
+        <p className="text-right font-geist font-normal text-[26px] leading-[95%] tracking-[-5%] text-black w-2/5">
+          Superheat H1 is engineered for performance —powerful enough to supply
+          your entire household with {""}
+          <span className="text-red-600">
+            efficient and sustainable hot water.
+          </span>
+        </p>
+      </div>
+    );
+  } else {
+    return (
+      <div className="flex md:flex-row flex-col justify-center items-center mt-5 mx-10 w-4/5">
+        <p className="text-left font-geist font-normal text-[56px] leading-[95%] tracking-[-5%] text-black w-1/3">
+          Efficient by design,built for exponential returns.
+        </p>
+        <div className="w-1/5"></div>
+        <p className="text-right font-geist font-normal text-[26px] leading-[95%] tracking-[-5%] text-black w-2/5">
+          Each unit installed transforms household consumption into a growing
+          revenue stream—{" "}
+          <span className="text-red-600">
+            scalable passive income for commercial projects.
+          </span>
+        </p>
+      </div>
+    );
+  }
 }
