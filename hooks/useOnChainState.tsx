@@ -1,42 +1,34 @@
-import { useState, useEffect } from 'react';
-import {
-  useConnect,
-  useDisconnect,
-  useAccount,
-  useBalance,
-  useSwitchChain,
-  useChainId,
-} from 'wagmi'
+import { useState, useEffect } from "react";
+import { useConnect, useDisconnect, useAccount, useBalance, useSwitchChain, useChainId } from "wagmi";
 
 export function useOnChainState() {
+  const { connect, connectors } = useConnect();
+  const { disconnect } = useDisconnect();
+  const { address, isConnected } = useAccount();
+  const { switchChain } = useSwitchChain();
+  const chainId = useChainId();
 
-  const { connect, connectors } = useConnect()
-  const { disconnect } = useDisconnect()
-  const { address, isConnected } = useAccount()
-  const { switchChain } = useSwitchChain()
-  const chainId = useChainId()
-
-  const connector = connectors[0]
+  const connector = connectors[0];
   const { data: rawbalanceData } = useBalance({ address });
-  const balance = rawbalanceData ? `${rawbalanceData.formatted} ${rawbalanceData.symbol}` : "0"
+  const balance = rawbalanceData ? `${rawbalanceData.formatted} ${rawbalanceData.symbol}` : "0";
 
-    function ConnectWallet() {
-      connect({ connector })
-      if (chainId != 11155111) {
-        try {
-          switchChain({ chainId: 11155111 })
-        } catch {
-          console.log("Oops,switchChain failed!!!!!!!! ")
-        }
+  function ConnectWallet() {
+    connect({ connector });
+    if (chainId != 11155111) {
+      try {
+        switchChain({ chainId: 11155111 });
+      } catch {
+        console.log("Oops,switchChain failed!!!!!!!! ");
       }
-      console.log(chainId)
     }
+    console.log(chainId);
+  }
 
-    function DisconnectWallet() {
-       return  disconnect()
-    }
+  function DisconnectWallet() {
+    return disconnect();
+  }
 
-    console.log(balance)
+  console.log(balance);
 
   return {
     ConnectWallet,
@@ -47,4 +39,3 @@ export function useOnChainState() {
     chainId,
   };
 }
-

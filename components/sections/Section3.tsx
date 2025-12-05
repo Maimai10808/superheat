@@ -6,7 +6,7 @@ import { useProductStore } from "@/store/productStore";
 
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
-import { Section3Img } from "../Grid/Section3Img";
+import { Section3Img } from "../grid/Section3Img";
 
 export default function Section3() {
   return (
@@ -31,7 +31,7 @@ function TheButton() {
   return (
     <div className="">
       <Button variant="outline" className="rounded-full">
-          <Plus /> Learn more about the product
+        <Plus /> Learn more about the product
       </Button>
     </div>
   );
@@ -46,7 +46,7 @@ function Switch() {
 }
 
 function ImgDisplay() {
-  const productType = useProductStore((state) => state.productType);
+  const productType = useProductStore(state => state.productType);
 
   if (productType === "Residential") {
     return <Section3Img imgsrc="/images/section3leftimg.png" />;
@@ -56,7 +56,7 @@ function ImgDisplay() {
 }
 
 function Title() {
-  const productType = useProductStore((state) => state.productType);
+  const productType = useProductStore(state => state.productType);
 
   if (productType === "Residential") {
     return (
@@ -66,11 +66,8 @@ function Title() {
         </p>
         <div className="w-1/5"></div>
         <p className="text-right font-geist font-normal text-[26px] leading-[95%] tracking-[-5%] text-black w-2/5">
-          Superheat H1 is engineered for performance —powerful enough to supply
-          your entire household with {""}
-          <span className="text-red-600">
-            efficient and sustainable hot water.
-          </span>
+          Superheat H1 is engineered for performance —powerful enough to supply your entire household with {""}
+          <span className="text-red-600">efficient and sustainable hot water.</span>
         </p>
       </div>
     );
@@ -82,11 +79,8 @@ function Title() {
         </p>
         <div className="w-1/5"></div>
         <p className="text-right font-geist font-normal text-[26px] leading-[95%] tracking-[-5%] text-black w-2/5">
-          Each unit installed transforms household consumption into a growing
-          revenue stream—{" "}
-          <span className="text-red-600">
-            scalable passive income for commercial projects.
-          </span>
+          Each unit installed transforms household consumption into a growing revenue stream—{" "}
+          <span className="text-red-600">scalable passive income for commercial projects.</span>
         </p>
       </div>
     );

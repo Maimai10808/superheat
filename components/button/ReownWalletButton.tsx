@@ -1,4 +1,3 @@
-
 export default function ConnectButton() {
-  return <appkit-button />
+  return <appkit-button />;
 }

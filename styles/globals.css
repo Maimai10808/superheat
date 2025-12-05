@@ -128,25 +128,23 @@
   }
 
   .gold-gradient-text {
-  background: radial-gradient(50% 300.83% at 50% 50%, #FFFFFF 38.14%, #FFD4B7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    background: radial-gradient(50% 300.83% at 50% 50%, #ffffff 38.14%, #ffd4b7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.gold-gradient-bg {
-  background: radial-gradient(ellipse at center, #FFD700 20%, #000000 100%);
-}
+  .gold-gradient-bg {
+    background: radial-gradient(ellipse at center, #ffd700 20%, #000000 100%);
+  }
 
   .bg-radial-orange-gradient {
-  background: radial-gradient(71.59% 71.59% at 50% 28.41%, #FF9E59 5.65%, #FF5D00 100%);
+    background: radial-gradient(71.59% 71.59% at 50% 28.41%, #ff9e59 5.65%, #ff5d00 100%);
   }
 
   .bg-radial-dark-gradient {
-  background: radial-gradient(151.48% 117.18% at 50% 23.4%, #232323 0%, #1F1F1F 73.18%);
+    background: radial-gradient(151.48% 117.18% at 50% 23.4%, #232323 0%, #1f1f1f 73.18%);
   }
-
 }
-
 
 @layer components {
   .font-section2-title {
@@ -154,35 +152,34 @@
   }
 
   .font-section2-subtitle {
-    @apply font-geist font-light text-[20px] leading-[1.10] tracking-[-0.05em] text-[#767676]
-}
+    @apply font-geist font-light text-[20px] leading-[1.10] tracking-[-0.05em] text-[#767676];
+  }
 
- .font-section4-title {
+  .font-section4-title {
     @apply font-geist font-normal text-[36px] leading-[95%] tracking-[-5%] text-white;
   }
 
   .font-section4-subtitle {
-    @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-[#767676]
+    @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-[#767676];
+  }
+
+  .font-section5-title {
+    @apply font-geist font-normal text-[46px] leading-[95%] tracking-[-5%] text-white;
+  }
+
+  .font-section5-table-th {
+    @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-[#767676];
+  }
+
+  .font-section5-table-td {
+    @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-white;
+  }
+
+  .font-section5-Roadmap-title {
+    @apply font-geist font-light text-[20px] leading-[110%] tracking-[-5%] text-white;
+  }
+
+  .font-section5-Roadmap-subtitle {
+    @apply font-geist font-light text-[12px] leading-[110%] tracking-[-5%] text-[#767676];
+  }
 }
-
-.font-section5-title {
-  @apply font-geist font-normal text-[46px] leading-[95%] tracking-[-5%] text-white;
-}
-
- .font-section5-table-th {
-   @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-[#767676]
- }
-
- .font-section5-table-td {
-   @apply font-geist font-light text-[16px] leading-[110%] tracking-[-5%] text-white;
- }
-
- .font-section5-Roadmap-title {
-   @apply font-geist font-light text-[20px] leading-[110%] tracking-[-5%] text-white;
- }
-
- .font-section5-Roadmap-subtitle {
-   @apply font-geist font-light text-[12px] leading-[110%] tracking-[-5%] text-[#767676];
- }
-}
-
