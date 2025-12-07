@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import ProductsChangingButton from "../button/ProductsChangingButton";
-import { useProductStore } from "@/store/productStore";
+import { useProductStore } from "@/store/Zustand/productStore";
 
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";

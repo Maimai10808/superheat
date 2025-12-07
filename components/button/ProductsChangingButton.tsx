@@ -1,7 +1,7 @@
 "use client";
 
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { useProductStore } from "@/store/productStore";
+import { useProductStore } from "@/store/Zustand/productStore";
 
 export default function ProductsChangingButton() {
   const productType = useProductStore(state => state.productType);
