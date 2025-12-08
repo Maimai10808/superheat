@@ -1,6 +1,6 @@
 "use client";
 
-import { useFetchTodos } from "@/hooks/todos/useFetchTodos";
+import { useFetchTodos } from "../../hooks/todos/useFetchTodos";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 
