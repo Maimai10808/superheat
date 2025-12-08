@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export function WagmiButton() {
-  const { ConnectWallet, DisconnectWallet, isConnected, address, balance, chainId } = useOnChainState();
+  const { connectWallet, disnectWallet, isConnected, address, balance, chainId } = useOnChainState();
 
   return (
     <div>
@@ -15,13 +15,13 @@ export function WagmiButton() {
           <p>Balance: {balance}</p>
 
           {/* <button onClick={batchRequest}>Batch Request</button> */}
-          <Button variant="orgcapsule" onClick={DisconnectWallet}>
+          <Button variant="orgcapsule" onClick={disnectWallet}>
             Disconnect
           </Button>
         </>
       ) : (
         <>
-          <Button variant="outline" size="icon" className="rounded-full bg-gray-500 " onClick={ConnectWallet}>
+          <Button variant="outline" size="icon" className="rounded-full bg-gray-500 " onClick={connectWallet}>
             <Image src="/images/metamask-icon.png" width={20} height={20} alt="Picture of the author" />
           </Button>
         </>

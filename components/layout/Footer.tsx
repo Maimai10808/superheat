@@ -22,50 +22,42 @@ function RightLogo() {
       <div>
         <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">Products</h2>
         <nav className="list-none mb-10">
-          <li>
-            <Link className="text-white hover:text-gray-400" href="">
-              Superheat H1
-            </Link>
-          </li>
+          <Link className="text-white hover:text-gray-400" href="">
+            <li> Superheat H1</li>
+          </Link>
         </nav>
       </div>
 
       {/* Resources */}
       <div>
-        <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">Resources</h2>
-        <nav className="list-none mb-10">
-          <li>
-            <Link className="text-white hover:text-gray-400" href="">
-              Whitepaper
-            </Link>
-          </li>
-          <li>
-            <Link className="text-white hover:text-gray-400" href="">
-              Brand Assets
-            </Link>
-          </li>
-          <li>
-            <Link className="text-white hover:text-gray-400" href="">
-              Media Kit
-            </Link>
-          </li>
-        </nav>
+        <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3 ">Resources</h2>
+
+        <div className="flex flex-row">
+          <Link className="text-white hover:text-gray-400" href="">
+            <li>Whitepaper</li>
+          </Link>
+
+          <Link className="text-white hover:text-gray-400" href="">
+            <li>Brand Assets</li>
+          </Link>
+
+          <Link className="text-white hover:text-gray-400" href="">
+            <li> Media Kit</li>
+          </Link>
+        </div>
       </div>
 
       {/* Social */}
       <div>
         <h2 className="title-font font-medium text-gray-400 tracking-widest text-sm mb-3">Social</h2>
         <nav className="list-none mb-10">
-          <li>
-            <Link className="text-white hover:text-gray-400" href="">
-              X
-            </Link>
-          </li>
-          <li>
-            <Link className="text-white hover:text-gray-400" href="">
-              Medium
-            </Link>
-          </li>
+          <Link className="text-white hover:text-gray-400" href="">
+            <li>X</li>
+          </Link>
+
+          <Link className="text-white hover:text-gray-400" href="">
+            <li>Medium</li>
+          </Link>
         </nav>
       </div>
     </div>

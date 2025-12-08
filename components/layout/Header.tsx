@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
-import ReownWalletButton from "@/components/button/ReownWalletButton";
 import { WagmiButton } from "@/components/button/WagmiButton";
 
 export default function Header() {
@@ -11,7 +10,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 text-gray-600 body-font gold-gradient-bg z-10  ">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
         {/* Left-logo */}
-        <Link className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="">
+        <Link className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
           <span className="ml-3 text-xl">Superheat</span>
         </Link>
 
@@ -27,6 +26,12 @@ export default function Header() {
           </Link>
           <Link className="mr-5 hover:text-gray-900" href="">
             Social
+          </Link>
+          <Link className="mr-5 hover:text-gray-900" href="/pokemon">
+            Pokemon
+          </Link>
+          <Link className="mr-5 hover:text-gray-900" href="/todos">
+            Todos
           </Link>
 
           <WagmiButton />
@@ -44,3 +49,7 @@ export default function Header() {
     </header>
   );
 }
+
+// export default function ConnectButton() {
+//   return <appkit-button />;
+// }

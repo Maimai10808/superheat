@@ -14,7 +14,7 @@ export default function ProductsChangingButton() {
   }
 
   return (
-    <div>
+    <>
       <ToggleGroup type="single" value={productType} onValueChange={handleValueChange}>
         <ToggleGroupItem value="Residential" aria-label="Toggle bold" className="bg-gray-300">
           Residential
@@ -24,6 +24,6 @@ export default function ProductsChangingButton() {
           Commercial
         </ToggleGroupItem>
       </ToggleGroup>
-    </div>
+    </>
   );
 }
