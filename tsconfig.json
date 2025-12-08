@@ -32,6 +32,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "web3.d.ts"
-, "hooks/useOnChainState.tsx"  ],
+, "hooks/useOnChainState.ts"  ],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,7 @@
-import Hero from "@/components/components/Hero";
-import Section2 from "@/components/components/sections/Section2";
-import Section3 from "@/components/components/sections/Section3";
-import Section5 from "@/components/components/sections/Section5";
+import Hero from "@/components/Apppage/Hero";
+import Section2 from "@/components/Apppage/Introducing";
+import Section3 from "@/components/Apppage/Hardware";
+import Section5 from "@/components/Apppage/UtilityPage";
 import { Suspense } from "react";
 
 export default function Home() {
