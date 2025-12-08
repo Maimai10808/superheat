@@ -1,6 +1,6 @@
 "use client";
 
-import { useFetchTodos } from "@/hooks/todos/useFetchTodos";
+import { useFetchTodos } from "../../hooks/todos/useFetchTodos";
 import type { ToDo } from "@/types/ToDo";
 
 export default function TodoDetail({ id }: { id: number }) {
