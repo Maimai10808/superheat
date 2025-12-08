@@ -1,5 +1,6 @@
 "use client";
 
+import { ToDo } from "@/types/ToDo";
 import { useQuery } from "@tanstack/react-query";
 
 async function fetchToDos(): Promise<ToDo[]> {
@@ -8,11 +9,11 @@ async function fetchToDos(): Promise<ToDo[]> {
   if (!res.ok) throw new Error(`Request failed: ${res.status} ${res.statusText}`);
 
   const data = (await res.json()) as ToDo[];
-  console.log("[useXXX] data:", data);
+  console.log("[useFetchToDos] data:", data);
   return data;
 }
 
-export function useFetchToDos() {
+export function useFetchTodos() {
   return useQuery<ToDo[], Error>({
     queryKey: ["todos"],
     queryFn: fetchToDos,

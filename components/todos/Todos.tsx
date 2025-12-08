@@ -1,11 +1,11 @@
 "use client";
 
+import { useFetchTodos } from "@/hooks/todos/useFetchTodos";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
-import { useFetchToDos } from "@/hooks/todos/useFetchToDos";
 
 export default function DemoPage() {
-  const { data, isLoading, isError, error } = useFetchToDos();
+  const { data, isLoading, isError, error } = useFetchTodos();
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: {(error as Error).message}</div>;

@@ -1,4 +1,4 @@
-type ToDo = {
+export type ToDo = {
   userId: number;
   id: number;
   title: string;
