@@ -7,7 +7,7 @@ export function WagmiButton() {
   const { connectWallet, disnectWallet, isConnected, address, balance, chainId } = useOnChainState();
 
   return (
-    <div>
+    <>
       {isConnected ? (
         <>
           <p>chainId : {chainId}</p>
@@ -26,6 +26,6 @@ export function WagmiButton() {
           </Button>
         </>
       )}
-    </div>
+    </>
   );
 }
