@@ -15,6 +15,7 @@ import {
 import { ArrowUpDown } from "lucide-react";
 
 import { Checkbox } from "@/components/ui/checkbox";
+import { ToDo } from "@/types/ToDo";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -48,11 +49,10 @@ export const columns: ColumnDef<ToDo>[] = [
       );
     },
     cell: ({ row }) => row.getValue("id"),
-    // 👇 自定义过滤：把 id 转成字符串做包含匹配
     filterFn: (row, columnId, filterValue) => {
       const id = String(row.getValue(columnId) ?? "");
       const query = String(filterValue ?? "").trim();
-      if (!query) return true; // 没输入就不过滤
+      if (!query) return true;
       return id.includes(query);
     },
   },
@@ -60,11 +60,10 @@ export const columns: ColumnDef<ToDo>[] = [
     accessorKey: "title",
     header: "Title",
     cell: ({ row }) => row.getValue("title"),
-    // 👇 自定义过滤：把 id 转成字符串做包含匹配
     filterFn: (row, columnId, filterValue) => {
       const title = String(row.getValue(columnId) ?? "");
       const query = String(filterValue ?? "").trim();
-      if (!query) return true; // 没输入就不过滤
+      if (!query) return true;
       return title.includes(query);
     },
   },
