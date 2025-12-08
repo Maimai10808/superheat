@@ -27,9 +27,6 @@ export default function Header() {
           <Link className="mr-5 hover:text-gray-900" href="">
             Social
           </Link>
-          <Link className="mr-5 hover:text-gray-900" href="/pokemon">
-            Pokemon
-          </Link>
           <Link className="mr-5 hover:text-gray-900" href="/todos">
             Todos
           </Link>
